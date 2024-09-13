@@ -13,7 +13,7 @@ namespace GatoApp
     public partial class SSBU : Form
     {
         Queue<Player> PlayerQueue = new Queue<Player>();
-        LinkedList<Player> Playing = new LinkedList<Player>();
+        Queue<Player> Playing = new Queue<Player>();
         public SSBU()
         {
             InitializeComponent();
@@ -29,14 +29,14 @@ namespace GatoApp
 
         private void submit_Click(object sender, EventArgs e)
         {
-            if (Playing.Count < 8)
+            if (Playing.Size() < 8)
             {
                 string name = textBox1.Text;
                 bool check = HasController.Checked;
-                int place = Playing.Count + 1;
+                int place = Playing.Size() + 1;
                 Player temp = new Player(name, place, check);
                 Node<Player> newNode = new Node<Player>(temp);
-                Playing.AddBack(newNode);
+                Playing.Enqueue(newNode);
                 listBox1.Items.Add(temp.ToString());
             }
             else
@@ -58,24 +58,29 @@ namespace GatoApp
         {
 
             listBox1.Items.Clear();
+            for(int i = 0; i < 8; i++)
+            {
+                Playing.Dequeue();
+            }
 
-            if (PlayerQueue.Size() > 0 && PlayerQueue.Size() > 8)
+            if (PlayerQueue.Size() > 8)
             {
                 for (int i = 0; i < 8; i++)
                 {
                     Node<Player> TempPlayer = new Node<Player>(PlayerQueue.Peek());
-                    Playing.AddBack(TempPlayer);
+                    Playing.Enqueue(TempPlayer);
                     listBox1.Items.Add(TempPlayer.Item.ToString());
                     PlayerQueue.Dequeue();
                     listBox2.Items.Remove(TempPlayer.Item.ToString());
                 }
             }
-            else if (PlayerQueue.Size() > 0 && PlayerQueue.Size() < 8)
+            else if (PlayerQueue.Size() < 8)
             {
-                for (int i = 0; i < PlayerQueue.Size(); i++)
+                int queueSize = PlayerQueue.Size();
+                for (int i = 0; i < queueSize; i++)
                 {
                     Node<Player> TempPlayer = new Node<Player>(PlayerQueue.Peek());
-                    Playing.AddBack(TempPlayer);
+                    Playing.Enqueue(TempPlayer);
                     listBox1.Items.Add(TempPlayer.Item.ToString());
                     PlayerQueue.Dequeue();
                     listBox2.Items.Remove(TempPlayer.Item.ToString());
