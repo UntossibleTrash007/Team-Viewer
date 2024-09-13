@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "EDvSuT07Us8zlupbj33p13Q9bICKnKtmeRNdXQwx6gW7ZbK6ZBxB4P+iYZdiaGu3Enymwh+D5zIy+ry8Yvan9w==",
+  "dgSpecHash": "/jq9vtyVLSs=",
   "success": true,
-  "projectFilePath": "T:\\VSCode\\Gato App\\GatoApp\\GatoApp\\GatoApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Aedan Archibald\\Team-Viewer\\GatoApp\\GatoApp\\GatoApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aedan Archibald\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.33\\microsoft.netcore.app.ref.6.0.33.nupkg.sha512",
+    "C:\\Users\\Aedan Archibald\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.33\\microsoft.windowsdesktop.app.ref.6.0.33.nupkg.sha512",
+    "C:\\Users\\Aedan Archibald\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.33\\microsoft.aspnetcore.app.ref.6.0.33.nupkg.sha512",
+    "C:\\Users\\Aedan Archibald\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.33\\microsoft.netcore.app.host.win-x64.6.0.33.nupkg.sha512"
+  ],
   "logs": []
 }
