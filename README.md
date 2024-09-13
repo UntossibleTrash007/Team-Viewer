@@ -3,4 +3,4 @@ Currently only available for Super Smash Bros. Ultimate and Mario Kart 8. Reques
 ## Features
 Allows the user to add players to a list of current players, once the current player limit has been reached (4 or 8 depending on the game), any additional players will be added to a queue. Click the "Next Players" button to automatically clear the current players list and replace it with the first 4 or 8 players in the queue.
 ## Current Bugs
-As of 2024/09/12, there is a bug where the player queue doesn't empty fully if there is less that the 4 or 8 players needed to go to the current player list. Bug fix in progress
+As of 2024/09/13, there are no bugs found
